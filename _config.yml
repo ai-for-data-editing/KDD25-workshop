@@ -1,8 +1,8 @@
 title: "AI for Urban Planning"
 description: >-
   AAAI 2025 Workshop on AI for Urban Planning
-url: "https://ai-for-urban-planning.github.io"
-baseurl: "/AAAI25-workshop"
+url: "https://aifordataediting.github.io"
+baseurl: "/AI-for-data-editing"
 
 theme: minima
 plugins:
@@ -13,6 +13,6 @@ plugins:
 sass:
   sass_dir: assets/css
   style: compressed
-  
+
 # 自定义变量
 primary_color: "#198754"  # Bootstrap绿色
