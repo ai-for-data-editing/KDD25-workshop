@@ -1,6 +1,7 @@
 title: "AI for Data Editing"
 description: "A simple GitHub Pages site."
 theme: jekyll-theme-cayman
+layout: default
 
 # 如果主题支持自动渲染 header_pages，可以这样写
 header_pages:
