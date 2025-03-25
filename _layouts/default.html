@@ -16,10 +16,15 @@
       <li><a href="#topics">Topics of Interest</a></li>
     </ul>
   </nav>
-  <!-- 这里是页面的主要内容，会自动注入每个页面的正文 -->
-  <main>
-    {{ content }}
-  </main>
+
+
+  <!-- 用一个容器控制内容的宽度与边距 -->
+  <div style="max-width: 900px; margin: 0 auto; padding: 1rem;">
+    <main>
+      {{ content }}
+    </main>
+  </div>
+
 
 </body>
 </html>
