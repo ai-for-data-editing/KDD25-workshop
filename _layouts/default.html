@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <!-- 一些必要的meta、CSS、JS等 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <title>AI for Data Editing</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
 </head>
+
 <body>
+  {% include navbar.html %}
 
-  <!-- 这是导航栏示例，可以换成你喜欢的样式 -->
-  <nav>
-    <ul>
-      <li><a href="#agenda">Agenda</a></li>
-      <li><a href="#photos">Photos</a></li>
-      <li><a href="#posters">Posters</a></li>
-      <li><a href="#topics">Topics of Interest</a></li>
-    </ul>
-  </nav>
+  <main class="container py-5">
+    {{ content }}
+  </main>
 
-
-  <!-- 用一个容器控制内容的宽度与边距 -->
-  <div style="max-width: 900px; margin: 0 auto; padding: 1rem;">
-    <main>
-      {{ content }}
-    </main>
-  </div>
-
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
