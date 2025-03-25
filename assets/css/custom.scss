@@ -1,0 +1,22 @@
+// 覆盖Bootstrap变量
+$primary: {{ site.primary_color }};
+
+// 页面标题样式
+.page-title {
+  border-bottom: 3px solid $primary;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+// 导航栏调整
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+// 内容区块间距
+.section-block {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
