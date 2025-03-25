@@ -1,8 +1,8 @@
 title: "AI for Urban Planning"
 description: >-
   AAAI 2025 Workshop on AI for Urban Planning
-url: "https://aifordataediting.github.io"
-baseurl: "/AI-for-data-editing"
+url: "https://ai-for-data-editing.github.io"
+baseurl: "/KDD25-workshop"
 
 theme: minima
 plugins:
