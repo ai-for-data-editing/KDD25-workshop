@@ -1,12 +1,18 @@
-title: "AI for Data Editing"
-description: "A simple GitHub Pages site."
-theme: jekyll-theme-cayman
-layout: default
+title: "AI for Urban Planning"
+description: >-
+  AAAI 2025 Workshop on AI for Urban Planning
+url: "https://ai-for-urban-planning.github.io"
+baseurl: "/AAAI25-workshop"
 
-# 如果主题支持自动渲染 header_pages，可以这样写
-header_pages:
-  - index.md
-  - agenda.md
-  - photos.md
-  - posters.md
-  # 其他页面
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+
+# 启用SCSS处理
+sass:
+  sass_dir: assets/css
+  style: compressed
+  
+# 自定义变量
+primary_color: "#198754"  # Bootstrap绿色

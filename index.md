@@ -1,32 +1,26 @@
-# AI-for-data-editing
-
-
 ---
 layout: default
-title: "Home"
+title: Home
 ---
 
-# Home
-这里是首页的介绍内容……  
+# Welcome to AAAI 2025 Workshop
 
----
+<div class="section-block" id="agenda">
+## Agenda
+这里是议程内容...
+</div>
 
-## <a id="agenda"></a>Agenda
-这里是议程的内容……
+<div class="section-block" id="photos">
+## Photos
+图片展示区域...
+</div>
 
----
+<div class="section-block" id="posters">
+## Posters
+海报展示...
+</div>
 
-## <a id="photos"></a>Photos
-这里是照片板块的内容……
-
----
-
-## <a id="posters"></a>Posters
-这里是海报板块的内容……
-
----
-
-## <a id="topics"></a>Topics of Interest
-这里是话题板块的内容……
-
----
+<div class="section-block" id="topics">
+## Topics of Interest
+讨论主题...
+</div>
