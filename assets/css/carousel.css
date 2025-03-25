@@ -1,0 +1,306 @@
+/* GLOBAL STYLES */
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+/* 轮播图全局优化 */
+.carousel {
+  margin-bottom: 4rem;
+  --carousel-min-height: 60vh;
+  --carousel-max-height: 80vh;
+  --control-size: 50px;
+  --caption-padding: 2rem;
+  --caption-bg-alpha: 0.6;
+}
+
+/* 轮播项容器优化 */
+.carousel-item {
+  position: relative;
+  min-height: var(--carousel-min-height);
+  max-height: var(--carousel-max-height);
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 图片容器新增渐变遮罩 */
+/* .carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 30%,
+    rgba(0, 0, 0, 0.15) 70%,
+    rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+} */
+
+/* 图片显示优化 */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 让图片完整显示，不裁剪 */
+  object-position: center center;
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+/* 文字容器改进 */
+.carousel-caption {
+  position: absolute;
+  top: 50%; /* 纵向居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 使文字完全居中 */
+  z-index: 2; /* 确保文字在图片之上 */
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* 使文字区域占据图片宽度 */
+  max-width: none; /* 移除宽度限制 */
+  padding: 0 15%; /* 为两边留白，防止文字贴边 */
+}
+
+.carousel-caption h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* 动态调整字体大小 */
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* 动态调整字体大小 */
+}
+
+.carousel-caption a.btn {
+  margin-top: 15px;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* 动态调整按钮文字大小 */
+  padding: 10px 20px;
+}
+
+/* 控制按钮优化 */
+.carousel-control-prev,
+.carousel-control-next {
+  width: var(--control-size);
+  height: var(--control-size);
+  background: rgba(0, 0, 0, 0.5); /* 深色背景提高对比度 */
+  border: 2px solid rgba(255, 255, 255, 0.7); /* 增强边框对比度 */
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+  top: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.7); /* 悬停时加深背景色 */
+  transform: scale(1.2);
+  border-color: rgba(255, 255, 255, 1); /* 悬停时增强边框 */
+}
+
+/* 指示器优化 */
+.carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8); /* 白色描边 */
+  background-color: rgba(0, 0, 0, 0.5); /* 深色半透明背景 */
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: rgba(255, 255, 255, 0.9); /* 亮色填充 */
+  border: 3px solid rgba(255, 255, 255, 1); /* 更明显的白色边框 */
+  transform: scale(1.3); /* 稍微放大 */
+}
+
+/* 交互样式 */
+.cursor-zoom {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+.carousel-img-container:hover .poster-image {
+  transform: scale(1.02);
+}
+
+/* 模态框优化 */
+.modal-content {
+  background: rgba(0, 0, 0, 0.85);
+}
+#fullScreenImage {
+  transition: transform 0.3s ease;
+}
+
+
+/* Basic table styling */
+table, table tr th, table tr td { 
+  border: 1px solid #000000; 
+  height: 50px; 
+  white-space: pre-line; 
+  text-align: left; /* Center the text in the table */
+  font-size: 20px; /* Default larger font size */
+}
+
+/* Make table responsive */
+table { 
+  width: 100%; /* Use 100% width to allow table to scale */
+  border-collapse: collapse; 
+  margin: 0 auto; /* Centered table */
+} 
+
+/* Adjust column widths */
+th:nth-child(1), td:nth-child(1) { width: 20%; } /* Adjusted width for Time column */
+th:nth-child(2), td:nth-child(2) { width: 50%; } /* Adjusted width for Session column */
+th:nth-child(3), td:nth-child(3) { width: 30%; } /* Adjusted width for Presenter column */
+
+/* 响应式优化 */
+@media (max-width: 992px) {
+  .carousel {
+    --carousel-min-height: 70vh;
+    --caption-padding: 1.5rem;
+    --caption-bg-alpha: 0.7;
+  }
+
+  .carousel-caption {
+    width: 95%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    --carousel-min-height: 80vh;
+    --control-size: 40px;
+    --caption-bg-alpha: 0.8;
+  }
+
+  .carousel-caption {
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .carousel-caption h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background: rgba(0, 0, 0, 0.4);
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    --carousel-min-height: 85vh;
+    --caption-padding: 1rem;
+  }
+
+  .carousel-caption {
+    width: 100%;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table, table tr th, table tr td {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  table, table tr th, table tr td {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
