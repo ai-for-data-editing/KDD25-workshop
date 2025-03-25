@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <!-- 一些必要的meta、CSS、JS等 -->
+</head>
+<body>
+
+  <!-- 这是导航栏示例，可以换成你喜欢的样式 -->
+  <nav>
+    <ul>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#posters">Posters</a></li>
+      <li><a href="#topics">Topics of Interest</a></li>
+    </ul>
+  </nav>
+  <!-- 这里是页面的主要内容，会自动注入每个页面的正文 -->
+  <main>
+    {{ content }}
+  </main>
+
+</body>
+</html>
