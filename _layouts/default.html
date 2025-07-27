@@ -827,6 +827,59 @@ document.querySelectorAll('.photo-image').forEach(img => {
   </div>
 </div>
 
+ <!-- New format -->
+
+<div style="background:#666;color:#fff;padding:20px;border-radius:8px;">
+
+  <!-- ROW 1: identity (left) + bio (right) -->
+  <div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
+    <!-- Identity -->
+    <div style="display:flex;flex:1 1 420px;min-width:320px;gap:24px;">
+      <img src="./assets/images/alix.jpg"
+           style="width:140px;height:140px;border-radius:50%;
+                  object-fit:cover;object-position:50% 40%;flex-shrink:0;">
+      <div style="flex:1;">
+        <h2 style="color:#fff;margin:0 0 8px;">Alix Schmidt</h2>
+        <p style="color:#bbb;margin:0;"><em>Dow Chemical</em></p>
+        <p style="color:#bbb;margin:4px 0 0;"><em>alixschmidt@gmail.com</em></p>
+      </div>
+    </div>
+
+    <!-- Bio (single column) -->
+    <div style="flex:1 1 480px;min-width:320px;">
+      <p style="margin:0;color:#ffb321;">
+        Alix focuses on applied machine learning for materials R&amp;D, data integration,
+        and production-scale analytics across legacy systems.
+      </p>
+    </div>
+  </div>
+
+  <!-- ROW 2: topics (left) + notes (right) -->
+  <div style="display:flex;gap:24px;flex-wrap:wrap;">
+    <!-- Speaking Topics -->
+    <div style="flex:1 1 380px;min-width:280px;">
+      <p><strong>Speaking Topics</strong></p>
+      <ul style="list-style:none;padding-left:0;margin:0;color:#ffb321;">
+        <li>The Myth of Clean Data: Real‑World Data Challenges in Materials Informatics</li>
+      </ul>
+    </div>
+
+    <!-- Speaker's Notes -->
+    <div style="flex:2 1 600px;min-width:320px;">
+      <p><strong>Speaker's Notes</strong></p>
+      <p style="color:#ffb321;margin:0;">
+        While many industries are digitally native, the chemicals and materials sector remains
+        dominated by legacy companies with fragmented data systems. It's often assumed that
+        unifying this data will enable effective use of AI. This talk challenges that view,
+        showing how even clean, integrated data in R&amp;D and materials design poses
+        fundamental challenges for machine learning.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
 
 <!-- Chunwei Liu 
 
