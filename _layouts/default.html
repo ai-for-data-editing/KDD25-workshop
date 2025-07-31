@@ -743,10 +743,61 @@ document.querySelectorAll('.photo-image').forEach(img => {
   </div>
 
 
+  <!-- New Susan; 添加一个margin bottm-->
 
-<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
-  <!-- Speaker Info -->
+<div style="background:#666;color:#fff;padding:20px;border-radius:8px;margin-bottom:8px;">
+
+  <div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:24px;">
+    <div style="display:flex;flex:1 1 420px;min-width:320px;gap:24px;">
+      <img src="./assets/images/Huanliu.jpg"
+           style="width:140px;height:140px;border-radius:50%;
+                  object-fit:cover;object-position:50% 40%;flex-shrink:0;">
+      <div style="flex:1;">
+        <h2 style="color:#fff;margin:0 0 8px;">Suzanne M. Shontz</h2>
+        <p style="color:#bbb;margin:0;"><em>University of Kansas</em></p>
+        <p style="color:#bbb;margin:4px 0 0;"><em>shontz@ku.edu</em></p>
+      </div>
+    </div>
+
+
+    <div style="grid-column:3;grid-row:2;">
+      <p style="margin:0;color:#bbb;">
+      Bio:Dr. Suzanne M. Shontz is the Associate Dean for Graduate and Online Education in the School of Engineering (SoE) and a Full Professor in the Department of Electrical Engineering and Computer Science at the University of Kansas (KU). 
+      She also holds courtesy appointments in the Department of Mechanical Engineering and the Bioengineering Program.  
+      In addition, she is the Director of the Mathematical Methods and Interdisciplinary Computing Center (MMICC) within the Information Sciences Institute at KU.  
+      Her research interests are in parallel scientific computing, with an emphasis on the development of unstructured mesh generation, numerical optimization, and machine learning methods, and their applications to image processing, 
+      computational medicine, materials, and other areas.  Prof. Shontz is a Fellow of the International Meshing Roundtable and is the recipient of an NSF CAREER Award, NSF Presidential Early Career Award for Scientists and Engineers, 
+      and the James Corones Award in Leadership, Community Building, and Communication.   
+      </p>
+    </div>
+  </div>
+
   
+  <div style="display:flex;gap:24px;flex-wrap:wrap;">
+
+    <div style="flex:1 1 380px;min-width:280px;">
+      <p style="font-size:20px;font-weight:700;margin:28px 0 12px;line-height:1.2;"><strong>Speaking Topics</strong></p>
+      <ul style="list-style:none;padding-left:0;margin:0;color:#ffb321;">
+        <li>Unsupervised Deep Learning-Based Deformable Image Registration for Cardiac Motion Estimation from Cine Cardiac MRI Images</li>
+      </ul>
+    </div>
+
+    <div style="flex:2 1 600px;min-width:320px;">
+      <p style="font-size:20px;font-weight:700;margin:28px 0 12px;line-height:1.2;"><strong>Speaker's Notes</strong></p>
+      <p style="color:#ffb321;margin:0;">
+      Estimated cardiac motion is used to assess the biomechanics of the cardiac chambers and is important for disease diagnosis and treatment planning. 
+      Cardiac motion can be estimated from a 4D cine cardiac MRI dataset by registering pairs of consecutive 3D images of the deforming heart. 
+      In this talk, I will present our hybrid convolutional neural network and Vision Transformer architecture for deformable image registration of 
+      3D cine cardiac MRI images for cardiac motion estimation followed by experimental results and discussion. 
+      </p>
+    </div>
+  </div>
+  </div>
+
+<!-- 
+<div style="display: flex; flex-direction: row; background-color: #666; color: white; padding: 20px; margin-bottom: 8px; font-size: 18px; border-radius: 8px;">
+
+
   <img src="./assets/images/suzanneshontz.jpg"
        style="width:140px;height:140px;border-radius:50%;
               object-fit:cover;object-position: 50% 20%;margin-right:24px;flex-shrink:0;">
@@ -756,23 +807,22 @@ document.querySelectorAll('.photo-image').forEach(img => {
     <p style="color: #bbb;"><em>University of Kansas, shontz@ku.edu</em></p>
   </div>
 
-  <!-- Speaking Topics and Fee -->
+
   <div style="flex: 1;">
     <p><strong>Speaking Topics</strong></p>
     <ul style="list-style: none; padding-left: 0; color: #ffb321;">
-      <!--<li>Adversity</li> -->
+
       <li>Artificial Intelligence (AI)</li>
-      <!--<li>Business</li> -->
+
     </ul>
   </div>
 
-  <!-- Fee -->
   <div style="flex: 2;">
     <p><strong>Speaker's Notes</strong></p>
     <p style="color: #ffb321;">TBD</p>
   </div>
 </div>
-
+-->
 
 
  <!-- New format  Alix-->
